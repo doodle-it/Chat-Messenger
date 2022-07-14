@@ -29,3 +29,6 @@ function checkKey(e) {
        $("#next")[0].click();
     }
 }
+
+// chat menu
+

@@ -5,8 +5,8 @@ body{
 
 .navbar{
   background-color: #424549;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   height: 60px;
 }
 
@@ -25,7 +25,7 @@ body{
   font-size: 1.2rem;
 }
 
-.search-people{
+.navbar .search-people{
   position: relative;
   left: 280px;
   text-align: left;
@@ -35,7 +35,7 @@ body{
   background-color: #1e2124;
   border: none;
 }
-.search-button{
+.navbar .search-button{
   position: relative;
   left: 280px;
   text-align: left;
@@ -61,7 +61,7 @@ input{
   right: 18px;
 }
 
-placeholder{
+[placeholder]{
   color: #424549;
 }
 
@@ -93,34 +93,6 @@ placeholder{
 
 .fa-video:hover{
   color: 	#7289da;
-}
-
-#theMenu{
-  position: fixed;
-  right: 0;
-  top: 0;
-  transform: translate3d(40vw,12vh,0);
-  transition: transform 500ms ease-in-out 25ms;
-  width: 40vw;
-  height: 100vw;
-  background-color: #424549;
-}
-
-#theMenu.visible{
-  transform: translate3d(0, 12vh, 0);
-}
-
-.fa-xmark{
-  position: relative;
-  left: 5px;
-  top: 5px;
-  font-size: 1.8rem;
-  color: #fff;
-}
-
-.fa-xmark:hover{
-  font-size: 2rem;
-  color: #7289da;
 }
 
 #hideNavbar{
@@ -191,4 +163,130 @@ video {
 .fa-thumbs-up{
   font-size: 2.2rem;
   color: #d6d5cb;
+}
+
+/* chat menu */
+
+
+#theMenu{
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate3d(40vw,65px,0);
+  transition: transform 500ms ease-in-out 25ms;
+  width: 40vw;
+  height: 92.5vh;
+  overflow-y: auto;
+  background-color: #424549;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:#424549; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1e2124; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7289da;
+}
+
+#theMenu.visible{
+  transform: translate3d(0, 65px,0);
+  border-radius: 10px 0 0 10px;
+}
+
+#theMenu a{
+  text-decoration: none;
+  color: #7289da;
+}
+.fa-xmark{
+  position: relative;
+  left: 5px;
+  top: 5px;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.fa-xmark:hover{
+  font-size: 2rem;
+  color: #7289da;
+}
+
+#theMenu .profile{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile .user-details{
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.profile span{
+  font-size: 130%;
+}
+
+.user-details p{
+  margin: 0;
+}
+
+#theMenu img{
+  width: 40px;
+}
+.users .search{
+  display: inline-block;
+  margin: 20px;
+}
+.search .search-people{
+  text-align: left;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-color: #1e2124;
+  border: none;
+  height: 40px;
+}
+
+.search .search-button{
+  text-align: left;
+  padding-left: 30px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-color: white;
+  border: none;
+  height: 40px;
+}
+
+.chat-users{
+  margin: 20px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #1e2124;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.chat-users:hover{
+  transform: translate(-12px, -12px);
+}
+
+.chat-users span {
+  font-weight: 600;
+}
+
+.chat-users .user-details{
+  padding-left: 10px;
 }
