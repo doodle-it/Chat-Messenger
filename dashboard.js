@@ -1,5 +1,5 @@
 $(".fa-comment").click(function(){
-  $("#theMenu").addClass("visible");
+  $("#theMenu").toggleClass("visible");
 });
 
 $(".fa-xmark").click(function(){
